@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <POU Name="fb_DBSRVInsertRecord" Id="{e335c143-6fa9-41ef-b8f7-d4a9881b27fa}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK fb_DBSRVInsertRecord
+VAR_INPUT
+	InsertData:ST_InsertData;
+	table:STRING(50);
+	DBID:UINT;
+	bExecute:bool;
+	
+END_VAR
+VAR_OUTPUT
+	bError:BOOL:=FALSE;
+	bReady:BOOL:=FALSE;
+	
+END_VAR
+VAR
+	nstep:INT:=10;
+	sCmd:STRING(255);
+	SQLcommand: FB_SQLCommandEvt(sNetid:='',tTimeout:=T#5S);
+	Connectdb: FB_sqldatabaseevt(SNetID:='', tTimeout:=T#5S);
+	connected:BOOL:=FALSE;
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bExecute THEN
+CASE nstep OF 
+	10:
+			sCmd:=concat('insert into ',table);
+			sCmd:=concat(sCmd,  ' (Dátum , temp_set, temp_act, hum_set, hum_act ) values ('); //{Datum},{temp_set},{temp_act},{hum_set}, {hum_act})');
+			sCmd:=concat(sCmd,insertdata.Datum);
+			sCmd:=concat(sCmd,', ');
+			sCmd:=concat(sCmd,insertdata.temp_set);
+			sCmd:=concat(sCmd,', ');
+			sCmd:=concat(sCmd,insertdata.temp_act);
+			sCmd:=concat(sCmd,', ');
+			sCmd:=concat(sCmd, insertdata.hum_set);
+			sCmd:=concat(sCmd,', ');
+			sCmd:=concat(sCmd,insertdata.hum_act);
+			sCmd:=concat(sCmd,')');
+			nstep:=20;
+	20:
+			IF connectDB.Connect(DBID) THEN
+				IF connectdb.bError THEN
+					bError:=TRUE;
+				ELSE
+					connected:=TRUE;	
+				END_IF
+			END_IF
+			IF connected AND NOT connectDB.bBusy THEN 
+				IF connectDB.CreateCmd(pSQLCommand:= ADR(SQLcommand)) THEN
+					nstep:=30;
+				END_IF
+			END_IF		
+	30:
+		IF SQLcommand.Execute(pSQLCmd:=ADR(sCmd),
+							cbSQLCmd:=SIZEOF(sCmd))
+			THEN
+			IF sqlcommand.bError THEN
+				Berror:=TRUE;
+			ELSE
+			IF NOT SQLcommand.bBusy THEN
+				nstep:=40;
+			END_IF
+			END_IF
+		END_IF
+	40:	
+		IF connectDB.Disconnect() THEN
+			IF connectdb.bError THEN
+				bError:=TRUE;
+			ELSE
+				connected:=FALSE;
+				bReady:=TRUE;
+				bExecute:=FALSE;	
+		END_IF
+		END_IF		
+		
+END_CASE
+END_IF]]></ST>
+    </Implementation>
+    <Method Name="Reset" Id="{b397fd6f-6838-45b1-929d-41d053163da2}">
+      <Declaration><![CDATA[METHOD Reset : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[bReady:=FALSE;
+nstep:=10;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="fb_DBSRVInsertRecord">
+      <LineId Id="49" Count="0" />
+      <LineId Id="24" Count="14" />
+      <LineId Id="51" Count="0" />
+      <LineId Id="53" Count="0" />
+      <LineId Id="55" Count="9" />
+      <LineId Id="52" Count="0" />
+      <LineId Id="39" Count="4" />
+      <LineId Id="71" Count="1" />
+      <LineId Id="45" Count="2" />
+      <LineId Id="85" Count="0" />
+      <LineId Id="73" Count="1" />
+      <LineId Id="76" Count="7" />
+      <LineId Id="75" Count="0" />
+      <LineId Id="48" Count="0" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="50" Count="0" />
+    </LineIds>
+    <LineIds Name="fb_DBSRVInsertRecord.Reset">
+      <LineId Id="5" Count="0" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

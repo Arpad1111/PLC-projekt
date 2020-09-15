@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <DUT Name="st_DBInfo" Id="{800feeb6-155c-4b4f-812f-49efea272df8}">
+    <Declaration><![CDATA[TYPE st_DBInfo :
+STRUCT
+	AccessConnectionInfo:ST_AccessConnectionInfo;
+	DBMS:STRING(50):='';
+	//table:STRING(50);
+	MYSQLConnectionInfo:ST_MYSQLConnectionInfo;
+	MongoDBConnectionInfo:ST_MongoDBConnectionInfo;
+	SQLiteConnectionInfo:ST_SQLiteConnectionInfo;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

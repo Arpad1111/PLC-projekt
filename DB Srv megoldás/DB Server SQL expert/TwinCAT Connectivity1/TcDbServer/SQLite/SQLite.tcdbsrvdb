@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Database>
+  <ID>3</ID>
+  <Name>SQLite</Name>
+  <ServerName>D:\Egyetemes szarok 6. félév\PLC projekt\speedTest.db</ServerName>
+  <DatabaseName />
+  <TableName />
+  <Authentication>False</Authentication>
+  <UserID />
+  <Password>UjztPioDjB0=</Password>
+  <Driver />
+  <Provider />
+  <Port>0</Port>
+  <Protocol />
+  <Scheme />
+  <Sequence />
+  <SystemDB />
+  <FireBird_ClientDLLPath />
+  <OLDASCIIFormat>False</OLDASCIIFormat>
+  <ASCIISeparator />
+  <DBValueType>NONE</DBValueType>
+  <DBType>SQLite</DBType>
+  <OdbcSubType>Unknown</OdbcSubType>
+  <Temporary>False</Temporary>
+  <Disabled>False</Disabled>
+  <Description />
+  <FailOverDBID>0</FailOverDBID>
+  <AdditionalParameter />
+  <AuthenticationMechanism>None</AuthenticationMechanism>
+  <SslCa />
+  <SslCertificateFilePath />
+  <SslCertificatePassword>UjztPioDjB0=</SslCertificatePassword>
+</Database>

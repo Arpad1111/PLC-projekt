@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<Database>
+  <ID>1</ID>
+  <Name>Access</Name>
+  <ServerName>D:\Egyetemes szarok 6. félév\PLC projekt\kezdo_ezer_rekord1.accdb</ServerName>
+  <DatabaseName />
+  <TableName />
+  <Authentication>True</Authentication>
+  <UserID />
+  <Password>UjztPioDjB0=</Password>
+  <Driver />
+  <Provider>Microsoft.ACE.OLEDB.12.0;</Provider>
+  <Port>0</Port>
+  <Protocol />
+  <Scheme />
+  <Sequence />
+  <SystemDB />
+  <FireBird_ClientDLLPath />
+  <OLDASCIIFormat>False</OLDASCIIFormat>
+  <ASCIISeparator />
+  <DBValueType>NONE</DBValueType>
+  <DBType>MS_Access</DBType>
+  <OdbcSubType>Unknown</OdbcSubType>
+  <Temporary>False</Temporary>
+  <Disabled>False</Disabled>
+  <Description />
+  <FailOverDBID>0</FailOverDBID>
+  <AdditionalParameter />
+  <AuthenticationMechanism>None</AuthenticationMechanism>
+  <SslCa />
+  <SslCertificateFilePath />
+  <SslCertificatePassword>UjztPioDjB0=</SslCertificatePassword>
+</Database>

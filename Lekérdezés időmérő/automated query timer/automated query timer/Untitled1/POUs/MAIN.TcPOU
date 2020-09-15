@@ -1,0 +1,454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <POU Name="MAIN" Id="{d0bf46d1-72ea-479f-9b0d-4f9afce767e3}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	//dbserver
+	DBSRVdatareturn:fb_DBSRVdatareturn;
+	
+	st_insertData:st_insertData;
+	st_returneddata:ST_ReturnedData_mysql_access;
+	//csharp
+	DataReturn:fb_datareturn;
+	ConnectDB:fb_ConnectDB;
+	DBWrite:fb_DBWrite;
+	Createtable:fb_CreateTable;
+	//időmérés
+	bStart:BOOL:=FALSE;
+	TONTimer:TON;
+	falling_trig:F_TRIG;
+	time1:TIME;
+	time_array: ARRAY [1..80] OF TIME;
+	timearraylenght:INT:=80;
+	counter:INT:=1;
+	
+	nstep:INT:=10;
+	testarray: ARRAY[1..21] OF test;
+	testarrayLenght:INT:=21;
+	i:INT:=1;
+	ExcelInfo:Excelinfo;
+	
+	startprocess: NT_startprocess;
+	startprocessExcel:ARRAY [1..21] OF NT_startprocess;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[CASE nstep OF 
+	5://idle
+		
+	10://init
+		connectdb.DBInfo.MYSQLConnectionInfo.DB:='speedTest';
+		connectdb.DBInfo.MYSQLConnectionInfo.password:='132435465768';
+		connectdb.DBInfo.MYSQLConnectionInfo.server:='localhost';
+		connectdb.DBInfo.MYSQLConnectionInfo.user:='root';
+		
+		connectdb.DBInfo.SQLiteConnectionInfo.Path:='D:\Egyetemes szarok 6. félév\PLC projekt\speedTest.db';
+		
+		connectdb.DBInfo.MongoDBConnectionInfo.MongoDBDatabase:='speedTest';
+		
+		connectdb.DBInfo.AccessConnectionInfo.Path:='D:\Egyetemes szarok 6. félév\PLC projekt\speedTest.accdb';
+		
+		testarray[1].connector:='dbserver';
+		testarray[1].dbID:=1;
+		testarray[1].dbtable:='10_record';
+		testarray[1].excelColName:='access 10 rec plc';
+		testarray[1].excelcol:=1;
+		
+		testarray[2].connector:='dbserver';
+		testarray[2].dbID:=1;
+		testarray[2].dbtable:='100_record';
+		testarray[2].excelColName:='access 100 rec plc';
+		testarray[2].excelcol:=3;
+		
+		testarray[3].connector:='dbserver';
+		testarray[3].dbID:=1;
+		testarray[3].dbtable:='1000_record';
+		testarray[3].excelColName:='access 1000 rec plc';
+		testarray[3].excelcol:=5;
+		
+		testarray[4].connector:='csharp';
+		testarray[4].dbName:='SQLite';
+		testarray[4].dbtable:='10_record';
+		testarray[4].excelColName:='sqlite 100 rec csarp';
+		testarray[4].excelcol:=7;
+		
+		testarray[5].connector:='csharp';
+		testarray[5].dbName:='MySQL';
+		testarray[5].dbtable:='10_record';
+		testarray[5].excelColName:='MYsql 10 rec csharp';
+		testarray[5].excelcol:=9;
+		
+		testarray[6].connector:='csharp';
+		testarray[6].dbName:='SQLite';
+		testarray[6].dbtable:='100_record';
+		testarray[6].excelColName:='sqlite 100 rec csarp';
+		testarray[6].excelcol:=11;
+		
+		testarray[7].connector:='csharp';
+		testarray[7].dbName:='MySQL';
+		testarray[7].dbtable:='100_record';
+		testarray[7].excelColName:='MYsql 100 rec csharp';
+		testarray[7].excelcol:=13;
+		
+		testarray[8].connector:='csharp';
+		testarray[8].dbName:='SQLite';
+		testarray[8].dbtable:='1000_record';
+		testarray[8].excelColName:='sqlite 1000 rec csarp';
+		testarray[8].excelcol:=15;
+		
+		
+		testarray[9].connector:='csharp';
+		testarray[9].dbName:='MySQL';
+		testarray[9].dbtable:='1000_record';
+		testarray[9].excelColName:='MYsql 1000 rec csharp';
+		testarray[9].excelcol:=17;
+		
+		testarray[10].connector:='csharp';
+		testarray[10].dbName:='Access';
+		testarray[10].dbtable:='10_record';
+		testarray[10].excelColName:='Access 10 rec csharp';
+		testarray[10].excelcol:=19;
+		
+		testarray[11].connector:='csharp';
+		testarray[11].dbName:='Access';
+		testarray[11].dbtable:='100_record';
+		testarray[11].excelColName:='Access 100 rec csharp';
+		testarray[11].excelcol:=21;
+		
+		testarray[12].connector:='csharp';
+		testarray[12].dbName:='Access';
+		testarray[12].dbtable:='1000_record';
+		testarray[12].excelColName:='Access 1000 rec csharp';
+		testarray[12].excelcol:=23;
+		
+		testarray[13].connector:='csharp';
+		testarray[13].dbName:='MongoDB';
+		testarray[13].dbtable:='10_record';
+		testarray[13].excelColName:='MongoDB 10 rec csharp';
+		testarray[13].excelcol:=25;
+		
+		testarray[14].connector:='csharp';
+		testarray[14].dbName:='MongoDB';
+		testarray[14].dbtable:='100_record';
+		testarray[14].excelColName:='MongoDB 100 rec csharp';
+		testarray[14].excelcol:=27;
+		
+		testarray[15].connector:='csharp';
+		testarray[15].dbName:='MongoDB';
+		testarray[15].dbtable:='1000_record';
+		testarray[15].excelColName:='MongoDB 1000 rec csharp';
+		testarray[15].excelcol:=29;
+		
+		testarray[16].connector:='dbserver';
+		testarray[16].dbID:=2;
+		testarray[16].dbtable:='10_record';
+		testarray[16].excelColName:='MySQL 10 rec DBserver';
+		testarray[16].excelcol:=31;
+		
+		testarray[17].connector:='dbserver';
+		testarray[17].dbID:=2;
+		testarray[17].dbtable:='100_record';
+		testarray[17].excelColName:='MySQL 100 rec DBserver';
+		testarray[17].excelcol:=33;
+		
+		testarray[18].connector:='dbserver';
+		testarray[18].dbID:=2;
+		testarray[18].dbtable:='1000_record';
+		testarray[18].excelColName:='MySQL 1000 rec DBserver';
+		testarray[18].excelcol:=35;
+		
+		testarray[19].connector:='dbserver';
+		testarray[19].dbID:=3;
+		testarray[19].dbtable:='$'10_record$'';
+		testarray[19].excelColName:='SQLite 10 rec DBserver';
+		testarray[19].excelcol:=37;
+		
+		testarray[20].connector:='dbserver';
+		testarray[20].dbID:=3;
+		testarray[20].dbtable:='$'100_record$'';
+		testarray[20].excelColName:='SQLite 100 rec DBserver';
+		testarray[20].excelcol:=39;
+		
+		testarray[21].connector:='dbserver';
+		testarray[21].dbID:=3;
+		testarray[21].dbtable:='$'1000_record$'';
+		testarray[21].excelColName:='SQLite 1000 rec DBserver';
+		testarray[21].excelcol:=41;
+		
+		//testarray[16].connector:='csharp';
+		//testarray[16].dbName:='MongoDB';
+		//testarray[16].dbtable:='10000_record';
+		//testarray[16].excelColName:='MongoDB 10000 rec csharp';
+		//testarray[16].excelcol:=16;
+		
+		startprocess(NETID:='',
+					PATHSTR:='D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\final with entity.exe',
+					DIRNAME:='D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug',
+					Comndline:='start final with entity.exe',//'win.ini',
+					START:=TRUE,
+					tMOUT:=T#5S);
+					IF NOT startprocess.BUSY THEN
+						nstep:=20;   
+					END_IF
+		
+		
+	20:	// choose connector
+		IF testarray[i].connector='csharp' THEN
+			nstep:=30;
+		END_IF
+		IF testarray[i].connector='dbserver' THEN
+			nstep:=100;
+		END_IF
+		
+	30://c# MEGOLDÁS
+		//connect 
+		//start timer	
+		
+		tontimer.IN:=TRUE;
+		connectdb.DBInfo.DBMS:=testarray[i].dbName;
+		connectdb.connect();
+		IF ConnectDB.bConnected THEN
+				nstep:=40;
+		END_IF
+	40://lekérdezés	
+		DataReturn.ReturnBetweenDates.kezdo:='2020-07-01 12:00:00';
+			DataReturn.ReturnBetweenDates.veg:='2020-08-30 12:00:00';
+			Datareturn.ReturnBetweenDates.table:=testarray[i].dbtable;//'1000_record';
+			//IF NOT datareturn.bExecute THEN
+				Datareturn.execute();
+			//END_IF
+			nstep:=50;
+			
+		//	IF DataReturn.bReady THEN
+				 //
+				// Connectdb.disconnect();
+				
+				//stop timer
+			//	tontimer.IN:=FALSE;
+				//nstep:=30;
+			//END_IF
+	50: 
+		IF DataReturn.bReady THEN
+				 //
+				 
+				 Connectdb.disconnect();
+				IF NOT connectdb.bConnected THEN
+					tontimer.IN:=FALSE;
+					datareturn.reset();
+					nstep:=30;
+				END_IF
+				//stop timer
+				
+			END_IF
+		
+		100:// db server megoldás
+			tontimer.IN:=TRUE;
+			IF testarray[i].dbID=1 THEN
+				DBSRVdatareturn.start:= '#7/1/2020 12:0:0#';
+				DBSRVdatareturn.end:=' #8/30/2020 15:0:0#';
+			ELSE 
+				DBSRVdatareturn.start:='$'2020-07-01 15:00:01$'' ;
+				DBSRVdatareturn.end:= '$'2020-08-30 15:00:01$'';	
+			END_IF
+			
+			DBSRVdatareturn(DBID:=testarray[i].dbID,
+				//table:='$'10_record$'',
+				table:=testarray[i].dbtable,
+				bExecute:=TRUE);
+				
+				//kezdo:='$'2020-07-01 15:00:01$'',
+				//veg:='$'2020-08-30 15:00:01$''); //// a dátumok szintén aposztrófok közzé mennek
+			IF DBSRVdatareturn.bReady THEN
+				DBSRVdatareturn.Reset();
+				DBSRVdatareturn.ClearArray();
+				tontimer.IN:=FALSE;
+				
+			END_IF
+			
+		200: // write to excel
+			ExcelInfo.ColumnName:=testarray[i].excelColName;
+				ExcelInfo.ColumnNumber:=testarray[i].excelcol;
+				excelinfo.path:='D:\Egyetemes szarok 6. félév\PLC projekt\Adatkiértékelés.xlsx';
+				startprocessExcel[i](NETID:='',
+							PATHSTR:='D:\Egyetemes szarok 6. félév\PLC projekt\Twincat array to excel\obj\Debug\Twincat array to excel.exe',
+							DIRNAME:='D:\Egyetemes szarok 6. félév\PLC projekt\Twincat array to excel\obj\Debug',
+							Comndline:='start Twincat array to excel.exe',
+							START:=TRUE,
+							tMOUT:=T#5S);
+				IF NOT startprocessExcel[i].BUSY AND excelinfo.bready THEN
+					IF i<=testarrayLenght THEN
+						i:=i+1;
+					ELSE
+						nstep:=	5;
+					END_IF
+					
+					excelinfo.bready:=FALSE;
+					//startprocessExcel[i].START:=FALSE;
+					nstep:=20;
+				END_IF				
+END_CASE
+	
+falling_trig(clk:=tontimer.IN);
+	IF falling_trig.Q THEN
+		time1:=tontimer.ET;
+		IF counter<timearraylenght+1 THEN
+			time_array[counter]:=time1;
+			counter:=counter+1;
+			tontimer.IN:=FALSE;
+			
+		ELSE
+			counter:=1;	
+			nstep:=200;
+			
+		END_IF
+	END_IF
+	tontimer(PT:=T#60S);
+
+		
+		
+]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+      <LineId Id="180" Count="1" />
+      <LineId Id="31" Count="0" />
+      <LineId Id="182" Count="0" />
+      <LineId Id="184" Count="2" />
+      <LineId Id="188" Count="1" />
+      <LineId Id="187" Count="0" />
+      <LineId Id="297" Count="0" />
+      <LineId Id="296" Count="0" />
+      <LineId Id="190" Count="0" />
+      <LineId Id="183" Count="0" />
+      <LineId Id="33" Count="3" />
+      <LineId Id="38" Count="1" />
+      <LineId Id="41" Count="3" />
+      <LineId Id="40" Count="0" />
+      <LineId Id="224" Count="0" />
+      <LineId Id="226" Count="3" />
+      <LineId Id="225" Count="0" />
+      <LineId Id="45" Count="0" />
+      <LineId Id="47" Count="3" />
+      <LineId Id="46" Count="0" />
+      <LineId Id="329" Count="0" />
+      <LineId Id="331" Count="3" />
+      <LineId Id="330" Count="0" />
+      <LineId Id="230" Count="0" />
+      <LineId Id="232" Count="3" />
+      <LineId Id="231" Count="0" />
+      <LineId Id="335" Count="0" />
+      <LineId Id="337" Count="3" />
+      <LineId Id="336" Count="0" />
+      <LineId Id="236" Count="0" />
+      <LineId Id="238" Count="3" />
+      <LineId Id="237" Count="0" />
+      <LineId Id="51" Count="0" />
+      <LineId Id="248" Count="0" />
+      <LineId Id="250" Count="3" />
+      <LineId Id="249" Count="0" />
+      <LineId Id="272" Count="0" />
+      <LineId Id="274" Count="3" />
+      <LineId Id="273" Count="0" />
+      <LineId Id="278" Count="0" />
+      <LineId Id="280" Count="3" />
+      <LineId Id="279" Count="0" />
+      <LineId Id="284" Count="0" />
+      <LineId Id="286" Count="3" />
+      <LineId Id="285" Count="0" />
+      <LineId Id="254" Count="0" />
+      <LineId Id="256" Count="3" />
+      <LineId Id="255" Count="0" />
+      <LineId Id="260" Count="0" />
+      <LineId Id="262" Count="3" />
+      <LineId Id="261" Count="0" />
+      <LineId Id="266" Count="0" />
+      <LineId Id="268" Count="3" />
+      <LineId Id="267" Count="0" />
+      <LineId Id="482" Count="0" />
+      <LineId Id="484" Count="1" />
+      <LineId Id="500" Count="0" />
+      <LineId Id="487" Count="0" />
+      <LineId Id="483" Count="0" />
+      <LineId Id="488" Count="0" />
+      <LineId Id="490" Count="3" />
+      <LineId Id="489" Count="0" />
+      <LineId Id="494" Count="0" />
+      <LineId Id="496" Count="3" />
+      <LineId Id="495" Count="0" />
+      <LineId Id="544" Count="0" />
+      <LineId Id="546" Count="3" />
+      <LineId Id="545" Count="0" />
+      <LineId Id="550" Count="0" />
+      <LineId Id="552" Count="3" />
+      <LineId Id="551" Count="0" />
+      <LineId Id="556" Count="0" />
+      <LineId Id="558" Count="3" />
+      <LineId Id="557" Count="0" />
+      <LineId Id="290" Count="0" />
+      <LineId Id="292" Count="3" />
+      <LineId Id="291" Count="0" />
+      <LineId Id="88" Count="0" />
+      <LineId Id="90" Count="8" />
+      <LineId Id="57" Count="3" />
+      <LineId Id="99" Count="0" />
+      <LineId Id="62" Count="0" />
+      <LineId Id="74" Count="2" />
+      <LineId Id="79" Count="0" />
+      <LineId Id="77" Count="0" />
+      <LineId Id="80" Count="0" />
+      <LineId Id="78" Count="0" />
+      <LineId Id="404" Count="0" />
+      <LineId Id="81" Count="2" />
+      <LineId Id="85" Count="1" />
+      <LineId Id="84" Count="0" />
+      <LineId Id="87" Count="0" />
+      <LineId Id="101" Count="5" />
+      <LineId Id="436" Count="0" />
+      <LineId Id="107" Count="7" />
+      <LineId Id="100" Count="0" />
+      <LineId Id="153" Count="0" />
+      <LineId Id="439" Count="1" />
+      <LineId Id="446" Count="0" />
+      <LineId Id="441" Count="1" />
+      <LineId Id="447" Count="0" />
+      <LineId Id="450" Count="0" />
+      <LineId Id="449" Count="0" />
+      <LineId Id="448" Count="0" />
+      <LineId Id="443" Count="1" />
+      <LineId Id="437" Count="1" />
+      <LineId Id="133" Count="0" />
+      <LineId Id="155" Count="0" />
+      <LineId Id="501" Count="1" />
+      <LineId Id="504" Count="2" />
+      <LineId Id="509" Count="0" />
+      <LineId Id="503" Count="0" />
+      <LineId Id="507" Count="0" />
+      <LineId Id="156" Count="2" />
+      <LineId Id="511" Count="0" />
+      <LineId Id="159" Count="0" />
+      <LineId Id="161" Count="1" />
+      <LineId Id="164" Count="0" />
+      <LineId Id="512" Count="1" />
+      <LineId Id="171" Count="1" />
+      <LineId Id="166" Count="1" />
+      <LineId Id="136" Count="0" />
+      <LineId Id="138" Count="1" />
+      <LineId Id="372" Count="0" />
+      <LineId Id="140" Count="6" />
+      <LineId Id="175" Count="1" />
+      <LineId Id="178" Count="1" />
+      <LineId Id="177" Count="0" />
+      <LineId Id="147" Count="0" />
+      <LineId Id="151" Count="1" />
+      <LineId Id="149" Count="0" />
+      <LineId Id="137" Count="0" />
+      <LineId Id="115" Count="0" />
+      <LineId Id="135" Count="0" />
+      <LineId Id="119" Count="13" />
+      <LineId Id="117" Count="1" />
+      <LineId Id="116" Count="0" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="32" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

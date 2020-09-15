@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <POU Name="fb_datareturn" Id="{74fe2c8c-3eed-4854-b16e-81f3686d2b76}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK fb_datareturn
+VAR_INPUT
+	dbid:UINT;
+	table:STRING(50);
+	start:STRING(100);
+	end:STRING(100);
+	bExecute:BOOL;
+	
+	
+END_VAR
+VAR_OUTPUT
+	ReadStruct: ARRAY [0..1700] OF ST_ReturnedData;
+	bReady:BOOL:=FALSE;
+	Error:BOOL:=FALSE;
+END_VAR
+VAR
+	sCmd:STRING(255):='';
+	nstep:int:=10;
+	SQLresult: FB_SQLResultEvt(sNetID:='', tTimeout:=T#5S);
+	SQLcommand: FB_SQLCommandEvt(sNetid:='',tTimeout:=T#5S);
+	Connectdb: FB_sqldatabaseevt(SNetID:='', tTimeout:=T#5S);
+	//bExecute:BOOL:=FALSE;
+	connected:BOOL:=FALSE;
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[	
+		
+IF bExecute THEN
+	CASE nstep OF
+	10:
+				sCmd:=CONCAT('SELECT * FROM ',table);
+				sCmd:=concat(sCmd, ' WHERE Dátum BETWEEN ');
+				sCmd:=concat(sCmd , start);
+				sCmd:=Concat(sCmd , ' AND ');
+				sCmd:=concat(sCmd , end);
+				sCmd:=concat(sCmd,';');
+				nstep:=20;
+	20:		IF connectDB.Connect(dbid) THEN
+				IF connectdb.bError THEN
+					Error:=TRUE;
+				ELSE
+					connected:=TRUE;
+					nstep:=25;
+				END_IF
+			END_IF
+		//	IF connected AND NOT connectDB.bBusy THEN 
+			//	IF connectDB.CreateCmd(pSQLCommand:= ADR(SQLcommand)) THEN
+			//		nstep:=30;
+			//	END_IF
+		//	END_IF	
+		
+			
+	25:		IF connected THEN
+				IF connectDB.CreateCmd(pSQLCommand:= ADR(SQLcommand)) THEN
+					nstep:=30;
+				END_IF
+			END_IF						
+	30:
+			IF SQLcommand.ExecuteDataReturn(pSQLCmd:=ADR(sCmd),
+										cbSQLCmd:=SIZEOF(sCmd),
+										pSQLDBResult:=ADR(SQLResult))
+			THEN
+			IF sqlcommand.bError THEN
+				Error:=TRUE;
+			ELSE
+				nstep:=40;
+			END_IF
+			END_IF
+	40:	IF SQLResult.Read(nStartindex:= 1,
+						  nRecordCount:=1001,
+						  pData:=ADR(ReadStruct),
+						  cbData:=SIZEOF(ReadStruct),
+							TRUE, TRUE)
+		THEN
+		IF sqlresult.bError THEN
+			Error:=TRUE;
+		ELSE
+			nstep:=45;
+		END_IF
+		END_IF	
+	
+	50:
+		IF connectDB.Disconnect() THEN
+			IF connectdb.bError THEN
+				Error:=TRUE;
+			ELSE
+				connected:=FALSE;
+				bReady:=TRUE;
+				bExecute:=FALSE;	
+		END_IF
+		END_IF	
+END_CASE
+END_IF]]></ST>
+    </Implementation>
+    <Method Name="ClearArray" Id="{99a79dab-4ac8-4bcc-9d0b-f926e5691c6f}">
+      <Declaration><![CDATA[METHOD ClearArray : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[memset(adr(readstruct),0,sizeof(readstruct));]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="Reset" Id="{3451f12f-e189-4ec8-a629-804e9a81d2d9}">
+      <Declaration><![CDATA[METHOD Reset : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[bReady:=FALSE;
+nstep:=10;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="fb_datareturn">
+      <LineId Id="58" Count="0" />
+      <LineId Id="63" Count="0" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="29" Count="0" />
+      <LineId Id="65" Count="0" />
+      <LineId Id="67" Count="3" />
+      <LineId Id="66" Count="0" />
+      <LineId Id="127" Count="0" />
+      <LineId Id="71" Count="0" />
+      <LineId Id="118" Count="0" />
+      <LineId Id="120" Count="0" />
+      <LineId Id="167" Count="1" />
+      <LineId Id="179" Count="0" />
+      <LineId Id="212" Count="0" />
+      <LineId Id="177" Count="0" />
+      <LineId Id="180" Count="0" />
+      <LineId Id="121" Count="3" />
+      <LineId Id="114" Count="0" />
+      <LineId Id="211" Count="0" />
+      <LineId Id="170" Count="0" />
+      <LineId Id="115" Count="0" />
+      <LineId Id="208" Count="2" />
+      <LineId Id="207" Count="0" />
+      <LineId Id="37" Count="4" />
+      <LineId Id="163" Count="2" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="45" Count="0" />
+      <LineId Id="169" Count="0" />
+      <LineId Id="46" Count="5" />
+      <LineId Id="160" Count="2" />
+      <LineId Id="53" Count="0" />
+      <LineId Id="56" Count="0" />
+      <LineId Id="178" Count="0" />
+      <LineId Id="238" Count="0" />
+      <LineId Id="152" Count="1" />
+      <LineId Id="155" Count="1" />
+      <LineId Id="173" Count="0" />
+      <LineId Id="175" Count="1" />
+      <LineId Id="174" Count="0" />
+      <LineId Id="158" Count="1" />
+      <LineId Id="27" Count="1" />
+    </LineIds>
+    <LineIds Name="fb_datareturn.ClearArray">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="fb_datareturn.Reset">
+      <LineId Id="5" Count="0" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

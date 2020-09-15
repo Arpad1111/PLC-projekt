@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <DUT Name="ExcelInfo" Id="{ce580304-3b3c-4417-afa8-b64081fa5705}">
+    <Declaration><![CDATA[TYPE ExcelInfo :
+STRUCT
+	ColumnName:STRING(50):='';
+	ColumnNumber:INT:=0;
+	bready:BOOL:=FALSE;
+	path:STRING(200):='';
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

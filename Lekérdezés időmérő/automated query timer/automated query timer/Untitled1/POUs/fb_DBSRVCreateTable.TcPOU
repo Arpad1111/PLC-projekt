@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <POU Name="fb_DBSRVCreateTable" Id="{80bf3b00-4ee6-4098-b993-a850821607aa}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK fb_DBSRVCreateTable
+VAR_INPUT
+	table:STRING(50);
+	bExecute:BOOL;
+	DBID:UINT;
+	
+END_VAR
+VAR_OUTPUT
+	bError:BOOL:=FALSE;
+	bReady:BOOL:=FALSE;
+END_VAR
+VAR
+	sCmd:STRING(255);
+	nstep:INT:=10;
+	SQLcommand: FB_SQLCommandEvt(sNetid:='',tTimeout:=T#5S);
+	Connectdb: FB_sqldatabaseevt(SNetID:='', tTimeout:=T#5S);
+	connected:BOOL:=FALSE;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bExecute THEN
+CASE nstep OF
+	10:
+		IF connectDB.Connect(DBID) THEN
+			
+			IF connectdb.bError THEN
+				bError:=TRUE;
+			ELSE
+				connected:=TRUE;	
+			END_IF
+		END_IF
+		IF connected and NOT connectDB.bBusy THEN 
+			IF connectDB.CreateCmd(pSQLCommand:= ADR(SQLcommand)) THEN
+				nstep:=20;
+			END_IF
+		END_IF
+	20:	
+	
+		sCmd:=concat('CREATE TABLE ', table);
+		sCmd:=concat(sCmd,'(Dátum DATETIME ,
+  						temp_set INTEGER ,
+  						temp_act INTEGER ,
+  						hum_set INTEGER ,
+ 						 hum_act INTEGER );');
+		nstep:=30;
+		
+	30:
+		IF SQLcommand.Execute(pSQLCmd:=ADR(sCmd),
+							cbSQLCmd:=SIZEOF(sCmd))
+		THEN
+			IF sqlcommand.bError THEN
+				berror:=TRUE;
+			ELSE
+			IF NOT SQLcommand.bBusy THEN
+				nstep:=40;
+			
+			END_IF
+			END_IF
+		END_IF
+	40:	
+		IF connectDB.Disconnect() THEN
+			IF connectdb.bError THEN
+				bError:=TRUE;
+			ELSE
+				connected:=FALSE;
+			bReady:=TRUE;
+			bExecute:=FALSE;	
+		END_IF
+		END_IF	
+			
+END_CASE
+END_IF
+
+]]></ST>
+    </Implementation>
+    <Method Name="Reset" Id="{1378e30f-d2df-457e-abcc-716510c6fa4f}">
+      <Declaration><![CDATA[METHOD Reset : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[bReady:=FALSE;
+nstep:=10;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="fb_DBSRVCreateTable">
+      <LineId Id="41" Count="0" />
+      <LineId Id="21" Count="0" />
+      <LineId Id="54" Count="0" />
+      <LineId Id="56" Count="1" />
+      <LineId Id="66" Count="1" />
+      <LineId Id="78" Count="1" />
+      <LineId Id="68" Count="0" />
+      <LineId Id="58" Count="4" />
+      <LineId Id="55" Count="0" />
+      <LineId Id="22" Count="13" />
+      <LineId Id="80" Count="2" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="51" Count="0" />
+      <LineId Id="49" Count="0" />
+      <LineId Id="40" Count="0" />
+      <LineId Id="64" Count="0" />
+      <LineId Id="83" Count="0" />
+      <LineId Id="52" Count="0" />
+      <LineId Id="69" Count="7" />
+      <LineId Id="65" Count="0" />
+      <LineId Id="53" Count="0" />
+      <LineId Id="9" Count="0" />
+      <LineId Id="44" Count="0" />
+      <LineId Id="43" Count="0" />
+      <LineId Id="42" Count="0" />
+    </LineIds>
+    <LineIds Name="fb_DBSRVCreateTable.Reset">
+      <LineId Id="5" Count="0" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

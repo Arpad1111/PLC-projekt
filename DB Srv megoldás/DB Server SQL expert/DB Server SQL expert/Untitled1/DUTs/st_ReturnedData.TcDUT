@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <DUT Name="st_ReturnedData" Id="{e01f71a8-2740-4ad8-9605-2c80d0ed9dc3}">
+    <Declaration><![CDATA[TYPE st_ReturnedData :
+STRUCT
+//	Datum:STRING(255);
+	//temp_set:LINT;
+	//temp_act:LINT;
+	//hum_set:LINT;
+	//hum_act:LINT;
+		Datum:DATE_AND_TIME;
+	temp_set:DINT;
+	temp_act:DINT;
+	hum_set:DINT;
+	hum_act:DINT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

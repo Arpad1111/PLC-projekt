@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <DUT Name="ST_ReturnedData_mysql_access" Id="{4278f77e-fb5a-4bc7-b664-348bc8487979}">
+    <Declaration><![CDATA[TYPE ST_ReturnedData_mysql_access :
+STRUCT
+	Datum:DATE_AND_TIME;
+	temp_set:DINT;
+	temp_act:DINT;
+	hum_set:dINT;
+	hum_act:DINT;
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

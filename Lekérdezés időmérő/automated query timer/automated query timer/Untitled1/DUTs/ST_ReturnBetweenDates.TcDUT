@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <DUT Name="ST_ReturnBetweenDates" Id="{99ecaa82-da38-4afc-9f6b-526bb976f514}">
+    <Declaration><![CDATA[TYPE ST_ReturnBetweenDates :
+STRUCT
+	kezdo : STRING;
+	veg:STRING;
+	table:STRING(50);
+	//bExecute:BOOL:=FALSE;
+	//DBMS: STRING(50);
+	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

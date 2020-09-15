@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <POU Name="MAIN" Id="{4d934eb9-7ebd-4818-b7fc-5be66a99ea54}" SpecialFunc="None">
+    <Declaration><![CDATA[PROGRAM MAIN
+VAR
+	nstep:INT:=20;
+	connection:FB_sqlcommandevt(snetid:='', tTimeout:=T#5S);
+	
+	Datareturn:fb_datareturn;
+	createtable:fb_createtable;
+	insertRecord:fb_insertrecord;
+	WriteCSV: fb_CSVWrite;
+	ReadCSV:fb_CSVRead;
+	
+	st_insertdata:ST_insertdata;
+	bDataReturn:BOOL:=FALSE;
+	bCreateTable:BOOL:=FALSE;
+	bInsert:BOOL:=FALSE;
+	
+	dbid:UINT:=3;
+	table:STRING:='$'1_kamra$'';
+	start:STRING:='$'2020-07-01 15:00:01$'';
+	end:STRING:='$'2020-08-30 15:00:01$'';
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[CASE nstep OF 
+	
+	20:
+		IF bdatareturn THEN
+			datareturn.ClearArray();
+			nstep:=30;
+			bdatareturn:=FALSE;
+		END_IF
+		IF bCreateTable THEN
+			nstep:=40;
+			bcreatetable:=FALSE;
+		END_IF
+		IF bInsert THEN
+			nstep:=50;
+			bInsert:=FALSE;
+		END_IF
+		
+		
+		
+	30:	// datareturn
+		
+		datareturn(dbid:=dbid,
+					table:=table,
+					start:=start,
+					end:=end,
+					bexecute:=TRUE);
+		IF datareturn.Error THEN
+			nstep:=99;
+		ELSE
+		IF datareturn.bReady THEN
+			
+			nstep:=20;
+			datareturn.Reset();
+		END_IF
+		END_IF
+		
+	40:	//create table
+		createtable(table:=table,
+					bExecute:=TRUE,
+					DBID:=dbid);
+		IF createtable.bError THEN
+			nstep:=99;
+		ELSE	
+		IF createtable.bReady THEN
+			createtable.Reset();	
+			nstep:=20;
+		END_IF
+		END_IF
+	50: // insert data
+		//st_insertData.Datum:='$'2020-01-01 12:00:20$'';//DT#2020-07-28-15:00:01 ;
+		////st_insertdata.hum_act:='1';
+		//st_insertdata.hum_set:='2';
+		//st_insertdata.temp_act:='3';
+		//st_insertdata.temp_set:='4';
+		insertrecord(insertdata:=st_insertdata,
+					table:=table,
+					DBID:=dbid,
+					bExecute:=TRUE);
+		IF insertrecord.bError THEN
+			nstep:=99;
+		ELSE
+		IF insertrecord.bReady THEN
+			nstep:=20;
+			insertrecord.Reset();
+		END_IF
+		END_IF
+
+	60: // write csv
+		st_insertData.Datum:='2020-01-01 12:00:20';//DT#2020-07-28-15:00:01 ;
+		st_insertdata.hum_act:='1';
+		st_insertdata.hum_set:='2';
+		st_insertdata.temp_act:='3';
+		st_insertdata.temp_set:='4';
+		WriteCSV(dbid:=4,
+				table:='1_kamra',
+				bExecute:=TRUE);
+		IF WriteCSV.bError THEN
+			nstep:=99;
+		ELSE
+		IF  WriteCSV.bReady THEN
+			nstep:=20;
+			WriteCSV.reset();
+		END_IF
+		END_IF		
+	
+	70:	//ReadCSV
+		ReadCSV(dbid:=4,
+				table:='1_kamra',
+				bExecute:=TRUE);
+		IF ReadCSV.bError THEN
+			nstep:=99;
+		ELSE
+		IF  ReadCSV.bReady THEN
+			nstep:=20;
+			ReadCSV.reset();
+		END_IF
+		END_IF		
+	99:// error
+		;	
+			
+END_CASE]]></ST>
+    </Implementation>
+    <LineIds Name="MAIN">
+      <LineId Id="2" Count="0" />
+      <LineId Id="22" Count="1" />
+      <LineId Id="32" Count="0" />
+      <LineId Id="192" Count="0" />
+      <LineId Id="33" Count="0" />
+      <LineId Id="137" Count="0" />
+      <LineId Id="34" Count="0" />
+      <LineId Id="37" Count="1" />
+      <LineId Id="138" Count="0" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="40" Count="1" />
+      <LineId Id="139" Count="0" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="193" Count="0" />
+      <LineId Id="45" Count="0" />
+      <LineId Id="265" Count="0" />
+      <LineId Id="46" Count="0" />
+      <LineId Id="179" Count="0" />
+      <LineId Id="131" Count="0" />
+      <LineId Id="155" Count="0" />
+      <LineId Id="132" Count="1" />
+      <LineId Id="156" Count="0" />
+      <LineId Id="172" Count="2" />
+      <LineId Id="51" Count="0" />
+      <LineId Id="56" Count="0" />
+      <LineId Id="55" Count="0" />
+      <LineId Id="52" Count="1" />
+      <LineId Id="175" Count="0" />
+      <LineId Id="97" Count="0" />
+      <LineId Id="57" Count="0" />
+      <LineId Id="98" Count="0" />
+      <LineId Id="176" Count="1" />
+      <LineId Id="60" Count="0" />
+      <LineId Id="63" Count="0" />
+      <LineId Id="182" Count="0" />
+      <LineId Id="180" Count="1" />
+      <LineId Id="61" Count="1" />
+      <LineId Id="183" Count="0" />
+      <LineId Id="64" Count="0" />
+      <LineId Id="66" Count="3" />
+      <LineId Id="65" Count="0" />
+      <LineId Id="74" Count="0" />
+      <LineId Id="184" Count="2" />
+      <LineId Id="78" Count="1" />
+      <LineId Id="187" Count="2" />
+      <LineId Id="81" Count="0" />
+      <LineId Id="80" Count="0" />
+      <LineId Id="76" Count="0" />
+      <LineId Id="205" Count="0" />
+      <LineId Id="70" Count="0" />
+      <LineId Id="207" Count="3" />
+      <LineId Id="206" Count="0" />
+      <LineId Id="211" Count="0" />
+      <LineId Id="214" Count="8" />
+      <LineId Id="224" Count="0" />
+      <LineId Id="204" Count="0" />
+      <LineId Id="226" Count="3" />
+      <LineId Id="231" Count="6" />
+      <LineId Id="230" Count="0" />
+      <LineId Id="35" Count="0" />
+      <LineId Id="191" Count="0" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="17" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

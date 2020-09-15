@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <POU Name="fb_CSVWrite" Id="{f0c3ef67-6118-4832-9964-b88959bf2466}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK fb_CSVWrite
+VAR_INPUT
+	bExecute:BOOL;
+	dbid:UINT;
+	table:STRING(100);
+END_VAR
+VAR_OUTPUT
+	bError:BOOL:=FALSE;
+	bReady:BOOL:=FALSE;
+END_VAR
+VAR
+	PLCDBWrite:fb_PLCDBWrite(snetid:='', tTimeout:=T#15S);
+	Columnnames: ARRAY [0..4] OF STRING(50):=['Dátum', 'temp_set', 'temp_act', 'hum_set', 'hum_act'];
+	InsertData:ST_InsertData;
+	
+	
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bExecute THEN
+	IF PLCDBWrite.WriteStruct(hDBID:=dbid,
+							stablename:=table,
+							pRecord:=ADR(InsertData),
+							cbRecord:=SIZEOF(InsertData),
+							pColumnNames:=ADR(columnNames),
+							cbColumnNames:=SIZEOF(columnNames))
+	THEN
+	IF plcdbwrite.bError THEN
+		bError:=TRUE;
+		
+	ELSE 
+	IF NOT plcdbwrite.bBusy THEN
+		bExecute:=FALSE;
+		bReady:=TRUE;
+	END_IF
+	END_IF
+END_IF	
+	
+							
+END_IF]]></ST>
+    </Implementation>
+    <Method Name="Reset" Id="{816436ef-fd9c-44c2-8646-92722839c530}">
+      <Declaration><![CDATA[METHOD Reset : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[BReady:=false;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="fb_CSVWrite">
+      <LineId Id="9" Count="0" />
+      <LineId Id="22" Count="0" />
+      <LineId Id="24" Count="0" />
+      <LineId Id="28" Count="3" />
+      <LineId Id="33" Count="2" />
+      <LineId Id="37" Count="0" />
+      <LineId Id="36" Count="0" />
+      <LineId Id="38" Count="0" />
+      <LineId Id="40" Count="1" />
+      <LineId Id="39" Count="0" />
+      <LineId Id="42" Count="1" />
+      <LineId Id="32" Count="0" />
+      <LineId Id="25" Count="0" />
+      <LineId Id="23" Count="0" />
+    </LineIds>
+    <LineIds Name="fb_CSVWrite.Reset">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

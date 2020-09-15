@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <POU Name="fb_DBWrite" Id="{f338848e-13af-4a78-886c-9fcf7cd4df3a}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK fb_DBWrite
+VAR_INPUT
+	DataStruct:ST_DataStruct;
+	Table:String(50);
+END_VAR
+VAR_OUTPUT
+	bReady:bool:=false;
+END_VAR
+VAR
+	bExecute:BOOL:=FALSE;
+	
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="execute" Id="{e5acd197-61d9-4ba5-ba7e-faad048654e0}">
+      <Declaration><![CDATA[METHOD execute : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[bExecute:=TRUE;
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="reset" Id="{5b328fe4-ef8d-4b13-9852-16fbc925a9a2}">
+      <Declaration><![CDATA[METHOD reset : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[bExecute:=FALSE;
+bReady:=false;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="fb_DBWrite">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="fb_DBWrite.execute">
+      <LineId Id="5" Count="0" />
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="fb_DBWrite.reset">
+      <LineId Id="5" Count="1" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

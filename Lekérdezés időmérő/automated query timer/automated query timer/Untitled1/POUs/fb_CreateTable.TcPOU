@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <POU Name="fb_CreateTable" Id="{d3fe11d2-ae59-4531-b2d9-57fd37adc6ac}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK fb_CreateTable
+VAR_INPUT
+	tablename:STRING(50);
+END_VAR
+VAR_OUTPUT
+	bReady:BOOL:=FALSE;
+END_VAR
+VAR
+	bExecute:Bool:=false;
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[]]></ST>
+    </Implementation>
+    <Method Name="execute" Id="{ec82c688-b6d3-4299-bfec-664a40218274}">
+      <Declaration><![CDATA[METHOD execute : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[bExecute:=TRUE;
+]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="reset" Id="{faa612af-0d76-4df4-984d-7446ad233771}">
+      <Declaration><![CDATA[METHOD reset : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[bExecute:=FALSE;
+bReady:=false;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="fb_CreateTable">
+      <LineId Id="9" Count="0" />
+    </LineIds>
+    <LineIds Name="fb_CreateTable.execute">
+      <LineId Id="5" Count="1" />
+    </LineIds>
+    <LineIds Name="fb_CreateTable.reset">
+      <LineId Id="5" Count="1" />
+    </LineIds>
+  </POU>
+</TcPlcObject>

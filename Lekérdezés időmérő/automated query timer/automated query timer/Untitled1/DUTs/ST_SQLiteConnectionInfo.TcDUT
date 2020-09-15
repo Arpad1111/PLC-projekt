@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <DUT Name="ST_SQLiteConnectionInfo" Id="{e1cc16d2-e1ea-4b4b-a04f-8bc1b8c031b6}">
+    <Declaration><![CDATA[TYPE ST_SQLiteConnectionInfo :
+STRUCT
+	Path:STRING(255);
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

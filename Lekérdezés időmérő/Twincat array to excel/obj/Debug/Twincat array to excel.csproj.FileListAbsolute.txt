@@ -1,0 +1,10 @@
+D:\Egyetemes szarok 6. félév\PLC projekt\Twincat array to excel\bin\Debug\Twincat array to excel.exe.config
+D:\Egyetemes szarok 6. félév\PLC projekt\Twincat array to excel\bin\Debug\Twincat array to excel.exe
+D:\Egyetemes szarok 6. félév\PLC projekt\Twincat array to excel\bin\Debug\Twincat array to excel.pdb
+D:\Egyetemes szarok 6. félév\PLC projekt\Twincat array to excel\bin\Debug\TwinCAT.Ads.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\Twincat array to excel\bin\Debug\TwinCAT.Ads.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\Twincat array to excel\obj\Debug\Twincat array to excel.csprojAssemblyReference.cache
+D:\Egyetemes szarok 6. félév\PLC projekt\Twincat array to excel\obj\Debug\Twincat array to excel.csproj.CopyComplete
+D:\Egyetemes szarok 6. félév\PLC projekt\Twincat array to excel\obj\Debug\Twincat array to excel.exe
+D:\Egyetemes szarok 6. félév\PLC projekt\Twincat array to excel\obj\Debug\Twincat array to excel.pdb
+D:\Egyetemes szarok 6. félév\PLC projekt\Twincat array to excel\obj\Debug\Twincat array to excel.csproj.CoreCompileInputs.cache

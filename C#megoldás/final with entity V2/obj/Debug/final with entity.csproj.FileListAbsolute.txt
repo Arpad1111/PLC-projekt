@@ -1,0 +1,287 @@
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\mongocrypt.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\runtimes\win-x86\native\e_sqlite3.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\runtimes\win-x64\native\e_sqlite3.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\runtimes\win-arm\native\e_sqlite3.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\final with entity.exe.config
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\final with entity.exe
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\final with entity.pdb
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\BouncyCastle.Crypto.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Crc32C.NET.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Dapper.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\DnsClient.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Google.Protobuf.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\K4os.Compression.LZ4.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\K4os.Hash.xxHash.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Bcl.HashCode.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Data.Sqlite.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.EntityFrameworkCore.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.EntityFrameworkCore.Sqlite.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.Configuration.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.DependencyModel.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.Logging.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.Options.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\MongoDB.Bson.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\MongoDB.Driver.Core.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\MongoDB.Driver.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\MongoDB.Libmongocrypt.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\MySql.Data.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\MySql.Data.EntityFrameworkCore.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Newtonsoft.Json.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Renci.SshNet.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\SharpCompress.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Snappy.NET.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\SQLitePCLRaw.core.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\SQLitePCLRaw.nativelibrary.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\SQLitePCLRaw.provider.dynamic_cdecl.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Buffers.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Collections.Immutable.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.ComponentModel.Annotations.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Data.SQLite.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Memory.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Numerics.Vectors.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Web.Helpers.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Web.Razor.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Web.WebPages.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\TwinCAT.Ads.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Ubiety.Dns.Core.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\WebMatrix.Data.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\WebMatrix.WebData.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Zstandard.Net.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Crc32C.NET.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Dapper.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\DnsClient.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Google.Protobuf.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\K4os.Compression.LZ4.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\K4os.Hash.xxHash.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Bcl.HashCode.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Data.Sqlite.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.DotNet.PlatformAbstractions.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.EntityFrameworkCore.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.EntityFrameworkCore.Relational.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.EntityFrameworkCore.Sqlite.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.Configuration.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.DependencyModel.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.Logging.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.Options.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\MongoDB.Bson.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\MongoDB.Driver.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\MongoDB.Driver.Core.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\MySql.Data.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\MySql.Data.EntityFrameworkCore.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Newtonsoft.Json.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Renci.SshNet.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Snappy.NET.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Buffers.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Collections.Immutable.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Data.SQLite.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Data.SQLite.dll.config
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Memory.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Numerics.Vectors.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Web.Helpers.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Web.Razor.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Web.WebPages.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\TwinCAT.Ads.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\WebMatrix.Data.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\WebMatrix.WebData.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\obj\Debug\final with entity.csproj.CopyComplete
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\obj\Debug\final with entity.exe
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\obj\Debug\final with entity.pdb
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\obj\Debug\final with entity.csprojAssemblyReference.cache
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Data.SqlClient.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Identity.Client.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Data.SqlClient.pdb
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\Microsoft.Identity.Client.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\de\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\es\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\it\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\mongocrypt.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\runtimes\win-x86\native\e_sqlite3.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\runtimes\win-x64\native\e_sqlite3.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\runtimes\win-arm\native\e_sqlite3.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\final with entity.exe.config
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\final with entity.exe
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\final with entity.pdb
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\BouncyCastle.Crypto.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Crc32C.NET.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Dapper.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\DnsClient.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Google.Protobuf.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\K4os.Compression.LZ4.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\K4os.Hash.xxHash.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Bcl.HashCode.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Data.SqlClient.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Data.Sqlite.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.EntityFrameworkCore.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.EntityFrameworkCore.Sqlite.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.Caching.Memory.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.Configuration.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.DependencyModel.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.Logging.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.Options.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Identity.Client.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Web.Infrastructure.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\MongoDB.Bson.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\MongoDB.Driver.Core.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\MongoDB.Driver.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\MongoDB.Libmongocrypt.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\MySql.Data.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\MySql.Data.EntityFrameworkCore.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Newtonsoft.Json.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Renci.SshNet.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\SharpCompress.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Snappy.NET.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\SQLitePCLRaw.core.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\SQLitePCLRaw.nativelibrary.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\SQLitePCLRaw.provider.dynamic_cdecl.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Buffers.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Collections.Immutable.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.ComponentModel.Annotations.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Data.SQLite.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Memory.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Numerics.Vectors.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Web.Helpers.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Web.Razor.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Web.WebPages.Deployment.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Web.WebPages.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Web.WebPages.Razor.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\TwinCAT.Ads.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Ubiety.Dns.Core.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\WebMatrix.Data.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\WebMatrix.WebData.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Zstandard.Net.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Crc32C.NET.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Dapper.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\DnsClient.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Google.Protobuf.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\K4os.Compression.LZ4.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\K4os.Compression.LZ4.Streams.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\K4os.Hash.xxHash.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Bcl.HashCode.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Data.SqlClient.pdb
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Data.Sqlite.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.DotNet.PlatformAbstractions.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.EntityFrameworkCore.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.EntityFrameworkCore.Abstractions.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.EntityFrameworkCore.Relational.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.EntityFrameworkCore.Sqlite.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.EntityFrameworkCore.SqlServer.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.Caching.Abstractions.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.Caching.Memory.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.Configuration.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.Configuration.Binder.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.DependencyModel.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.Logging.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.Options.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Microsoft.Identity.Client.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\MongoDB.Bson.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\MongoDB.Driver.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\MongoDB.Driver.Core.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\MySql.Data.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\MySql.Data.EntityFrameworkCore.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Newtonsoft.Json.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Renci.SshNet.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\Snappy.NET.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Buffers.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Collections.Immutable.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Data.SQLite.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Data.SQLite.dll.config
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Memory.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Numerics.Vectors.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Web.Helpers.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Web.Razor.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Web.WebPages.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Web.WebPages.Deployment.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\System.Web.WebPages.Razor.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\TwinCAT.Ads.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\WebMatrix.Data.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\WebMatrix.WebData.xml
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\de\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\es\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\fr\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\it\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\ja\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\ko\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\pt-BR\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\ru\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\zh-Hans\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\zh-Hant\Microsoft.Data.SqlClient.resources.dll
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\obj\Debug\final with entity.csprojAssemblyReference.cache
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\obj\Debug\final with entity.csproj.CopyComplete
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\obj\Debug\final with entity.exe
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\obj\Debug\final with entity.pdb
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\final with entity.exe.manifest
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\bin\Debug\final with entity.application
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\obj\Debug\final with entity.exe.manifest
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\obj\Debug\final with entity.application
+D:\Egyetemes szarok 6. félév\PLC projekt\final with entity V2\obj\Debug\final with entity.csproj.CoreCompileInputs.cache

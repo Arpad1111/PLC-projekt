@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <DUT Name="ST_mongoDBConnectionInfo" Id="{19efbad1-b123-4058-a6dc-5077ff2190dd}">
+    <Declaration><![CDATA[TYPE ST_mongoDBConnectionInfo :
+STRUCT
+	MongoDBDatabase:STRING(50):='';
+	
+END_STRUCT
+END_TYPE
+]]></Declaration>
+  </DUT>
+</TcPlcObject>

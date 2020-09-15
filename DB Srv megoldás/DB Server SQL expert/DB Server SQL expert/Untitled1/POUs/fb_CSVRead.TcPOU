@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TcPlcObject Version="1.1.0.1" ProductVersion="3.1.4024.2">
+  <POU Name="fb_CSVRead" Id="{659727eb-0be6-4836-bb55-8234476a08aa}" SpecialFunc="None">
+    <Declaration><![CDATA[FUNCTION_BLOCK fb_CSVRead
+VAR_INPUT
+	bExecute:BOOL;
+	dbid:UINT;
+	table:STRING(100);
+END_VAR
+VAR_OUTPUT
+	bError:BOOL:=FALSE;
+	bReady:BOOL:=FALSE;
+END_VAR
+VAR
+	PLCDBRead:fb_PLCDBRead(sNetid:='', tTimeOut:=T#15S);
+	ReadStruct: ARRAY [0..1700] OF ST_ReturnedData;
+	Columnnames: ARRAY [0..4] OF STRING(50):=['Dátum', 'temp_set', 'temp_act', 'hum_set', 'hum_act'];
+END_VAR
+]]></Declaration>
+    <Implementation>
+      <ST><![CDATA[IF bExecute THEN
+	IF PLCDBread.ReadStruct(hDBID:=dbid,
+							sTableName:=table,
+							pColumnNames:=ADR(ColumnNames),
+							cbColumnNames:=SIZEOF(ColumnNames),
+							sOrderByColumn:='Dátum',
+							eOrderType:=E_ordertype.ASC,
+							nStartIndex:=0,
+							nRecordCount:=1000,
+							pData:=ADR(readstruct),
+							cbData:=SIZEOF(readstruct))
+	THEN
+	IF plcdbread.bError THEN
+		berror:=TRUE;	
+	ELSE
+	IF NOT plcdbread.bBusy THEN
+		bExecute:=FALSE;
+		bReady:=TRUE;
+	END_IF	
+	END_IF
+	END_IF				
+END_IF]]></ST>
+    </Implementation>
+    <Method Name="ClearArray" Id="{585624b8-a82f-4907-9741-f081bc9d50e4}">
+      <Declaration><![CDATA[METHOD ClearArray : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[memset(adr(readstruct),0,sizeof(readstruct));]]></ST>
+      </Implementation>
+    </Method>
+    <Method Name="reset" Id="{0f71b593-3e49-43a6-966a-d876fcd12cb8}">
+      <Declaration><![CDATA[METHOD reset : BOOL
+VAR_INPUT
+END_VAR
+]]></Declaration>
+      <Implementation>
+        <ST><![CDATA[bReady:=false;]]></ST>
+      </Implementation>
+    </Method>
+    <LineIds Name="fb_CSVRead">
+      <LineId Id="9" Count="0" />
+      <LineId Id="17" Count="0" />
+      <LineId Id="19" Count="1" />
+      <LineId Id="22" Count="8" />
+      <LineId Id="32" Count="6" />
+      <LineId Id="54" Count="0" />
+      <LineId Id="18" Count="0" />
+    </LineIds>
+    <LineIds Name="fb_CSVRead.ClearArray">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+    <LineIds Name="fb_CSVRead.reset">
+      <LineId Id="5" Count="0" />
+    </LineIds>
+  </POU>
+</TcPlcObject>
